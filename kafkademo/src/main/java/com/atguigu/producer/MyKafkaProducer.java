@@ -6,6 +6,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.util.Properties;
 
+//  异步发送API
 //  不带回调函数的API
 
 /*

@@ -4,7 +4,13 @@ import org.apache.kafka.clients.producer.*;
 
 import java.util.Properties;
 
+//  异步发送API
 //  带回调函数的API
+/*
+    回调函数会在producer收到ack时调用，为异步调用，该方法有两个参数，分别是RecordMetadata和Exception，
+    如果Exception为null，说明消息发送成功，如果Exception不为null，说明消息发送失败。
+    注意：消息发送失败会自动重试，不需要我们在回调函数中手动重试。
+ */
 
 /*
     KafkaProducer：需要创建一个生产者对象，用来发送数据

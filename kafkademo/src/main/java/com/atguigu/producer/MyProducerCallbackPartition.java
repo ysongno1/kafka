@@ -4,7 +4,7 @@ import org.apache.kafka.clients.producer.*;
 
 import java.util.Properties;
 
-//  带回调函数的API
+//  指定分区
 
 /*
     KafkaProducer：需要创建一个生产者对象，用来发送数据

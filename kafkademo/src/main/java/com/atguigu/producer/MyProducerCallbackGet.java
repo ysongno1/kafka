@@ -5,6 +5,12 @@ import org.apache.kafka.clients.producer.*;
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
 
+/*
+    同步发送的意思就是，一条消息发送之后，会阻塞当前线程，直至返回ack。
+    由于send方法返回的是一个Future对象，根据Futrue对象的特点，我们也可以实现同步发送的效果，
+    只需在调用Future对象的get方发即可。
+
+ */
 //  带回调函数的API
 
 /*
